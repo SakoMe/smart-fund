@@ -1,5 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import factory from '../ethereum/factory';
 
-const Home = () => <h1>This is the Home Page</h1>;
+export default class Home extends Component {
+  static async getInitialProps() {
+    const campaigns = await factory.methods.getDeployedCampaigns().call();
+    return { campaigns };
+  }
 
-export default Home;
+  render() {
+    return (
+      <div>
+        <h1>{this.props.campaigns[0]}</h1>
+      </div>
+    );
+  }
+}
