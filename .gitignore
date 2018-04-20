@@ -1,5 +1,6 @@
 node_modules/
+build/
 .next/
-yarn-error.log
 .env
 ethereum/contractDeploymentInfo.txt
+yarn-error.log
