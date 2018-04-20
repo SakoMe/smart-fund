@@ -3,9 +3,9 @@ import { Menu } from 'semantic-ui-react';
 import { Link } from '../routes';
 
 const Header = () => (
-  <Menu>
+  <Menu style={{ fontSize: '1.5rem' }}>
     <Link route="/">
-      <a className="item">Democratic Armenia Fund 🇦🇲</a>
+      <a className="item">Democratic Armenia Fund</a>
     </Link>
     <Menu.Menu position="right">
       <Link route="/">
