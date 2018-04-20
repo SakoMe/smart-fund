@@ -31,7 +31,9 @@ export default class CampaignNew extends Component {
   render() {
     return (
       <Layout>
-        <h3>Create a New Campaign</h3>
+        <h2 style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+          Create a New Campaign
+        </h2>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
             <label>Minimum Contribution for the Campaign</label>

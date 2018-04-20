@@ -29,7 +29,9 @@ export default class CampaignIndex extends Component {
   render() {
     return (
       <Layout>
-        <h3 style={{ marginTop: '3rem' }}>Open Campaigns</h3>
+        <h2 style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+          Open Campaigns
+        </h2>
         <Link route="campaigns/new">
           <a>
             <Button

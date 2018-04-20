@@ -70,19 +70,26 @@ export default class CampaignShow extends Component {
   render() {
     return (
       <Layout>
-        <h3 style={{ marginTop: '3rem' }}>Campaign Details</h3>
+        <h2 style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+          Campaign Details
+        </h2>
         <Grid>
-          <Grid.Column width={10}>
-            {this.renderCampaignSummary()}
-            <Link route={`/campaigns/${this.props.address}/requests`}>
-              <a>
-                <Button primary>Requests</Button>
-              </a>
-            </Link>
-          </Grid.Column>
-          <Grid.Column width={6}>
-            <ContributeForm address={this.props.address} />
-          </Grid.Column>
+          <Grid.Row>
+            <Grid.Column width={10}>{this.renderCampaignSummary()}</Grid.Column>
+            <Grid.Column width={6}>
+              <ContributeForm address={this.props.address} />
+            </Grid.Column>
+          </Grid.Row>
+
+          <Grid.Row>
+            <Grid.Column>
+              <Link route={`/campaigns/${this.props.address}/requests`}>
+                <a>
+                  <Button primary>View Requests</Button>
+                </a>
+              </Link>
+            </Grid.Column>
+          </Grid.Row>
         </Grid>
       </Layout>
     );
