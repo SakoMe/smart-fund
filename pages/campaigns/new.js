@@ -36,9 +36,9 @@ export default class CampaignNew extends Component {
         </h2>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
           <Form.Field>
-            <label>Minimum Contribution for the Campaign</label>
+            <label>Minimum Contribution for this Campaign</label>
             <Input
-              placeholder="Minimum contribution for the campaign in wei..."
+              placeholder="Set the minimum contribution for campaign in wei..."
               label="wei"
               labelPosition="right"
               value={this.state.minimumContribution}
@@ -48,9 +48,12 @@ export default class CampaignNew extends Component {
             />
           </Form.Field>
           <Message error header="Oops!" content={this.state.errorMessage} />
-          <Button loading={this.state.isLoading} primary>
-            Create
-          </Button>
+          <Button
+            loading={this.state.isLoading}
+            color="violet"
+            icon="add circle"
+            content="Create!"
+          />
         </Form>
       </Layout>
     );

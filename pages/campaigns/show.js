@@ -33,28 +33,28 @@ export default class CampaignShow extends Component {
     const items = [
       {
         header: managerAddress,
-        meta: 'Address of Campaign Manager',
+        meta: 'Blochain Address of Manager',
         description:
-          'The Manager is the Campaign Creator and can make requests for funds to be withdrawn from Campaign',
+          'The Manager is the Campaign Creator and can make requests for funds to be withdrawn from this Campaign',
         style: { overflowWrap: 'break-word' },
       },
       {
         header: minimumContribution,
         meta: 'Minimum Contribution (wei)',
         description:
-          'You must contribute at least this much wei to become an approver',
+          'Minimum contirbution required by this campaign. Contributors will have the power to approve expenditure requests',
       },
       {
         header: requestCount,
         meta: 'Number of Requests',
         description:
-          'A request tries to withdraw money from the contract. Requests must be approved by approvers',
+          'A request tries to withdraw money from the contract. Requests must be approved by contributors',
       },
       {
         header: approversCount,
         meta: 'Number of Contributors',
         description:
-          'Number of people who have already donated to this campaign',
+          'Number of people who have already contributed to this campaign',
       },
       {
         header: web3.utils.fromWei(campaignBalance, 'ether'),
@@ -85,7 +85,7 @@ export default class CampaignShow extends Component {
             <Grid.Column>
               <Link route={`/campaigns/${this.props.address}/requests`}>
                 <a>
-                  <Button primary>View Requests</Button>
+                  <Button color="violet" icon="eye" content="View Requests" />
                 </a>
               </Link>
             </Grid.Column>

@@ -30,9 +30,9 @@ export default class ContributeForm extends Component {
     return (
       <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
         <Form.Field>
-          <label>Minimum Contribution for the Campaign</label>
+          <label>Contribution amount</label>
           <Input
-            placeholder="Minimum contribution for the campaign in ether..."
+            placeholder="How much ether would you like to contribute?"
             label="ether"
             labelPosition="right"
             value={this.state.value}
@@ -40,9 +40,12 @@ export default class ContributeForm extends Component {
           />
         </Form.Field>
         <Message error header="Oops!" content={this.state.errorMessage} />
-        <Button loading={this.state.isLoading} primary>
-          Contribute!
-        </Button>
+        <Button
+          loading={this.state.isLoading}
+          color="violet"
+          icon="heart"
+          content="Contribute!"
+        />
       </Form>
     );
   }

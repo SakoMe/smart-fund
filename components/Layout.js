@@ -6,7 +6,7 @@ import Header from './Header';
 const Layout = props => (
   <React.Fragment>
     <Head>
-      <title>Democratic Armenia Fund 🇦🇲</title>
+      <title>Ethereum Armenia Fund 🇦🇲</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link

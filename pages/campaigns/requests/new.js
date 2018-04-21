@@ -45,9 +45,6 @@ export default class RequestNew extends Component {
   render() {
     return (
       <Layout>
-        <Link route={`/campaigns/${this.props.address}/requests`}>
-          <a>Back</a>
-        </Link>
         <h2 style={{ marginTop: '3rem', marginBottom: '3rem' }}>
           Create a New Request
         </h2>
@@ -77,9 +74,22 @@ export default class RequestNew extends Component {
             />
           </Form.Field>
           <Message error header="Oops!" content={this.state.errorMessage} />
-          <Button primary loading={this.state.isLoading}>
-            Request
-          </Button>
+          <Button
+            loading={this.state.isLoading}
+            color="violet"
+            icon="send outline"
+            content="Request"
+          />
+          <Link route={`/campaigns/${this.props.address}/requests`}>
+            <a>
+              <Button
+                floated="right"
+                color="red"
+                icon="cancel"
+                content="Cancel"
+              />
+            </a>
+          </Link>
         </Form>
       </Layout>
     );

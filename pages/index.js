@@ -36,9 +36,9 @@ export default class CampaignIndex extends Component {
           <a>
             <Button
               floated="right"
-              content="Create Campaign"
+              color="violet"
               icon="add circle"
-              primary
+              content="Create Campaign!"
             />
           </a>
         </Link>
