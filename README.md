@@ -25,40 +25,40 @@ To run locally:
 2.  Make a .env file and store the credentials like so:
 
 ```
-METAMASK_MNEMONIC=<your mnemonic here...>
+METAMASK_MNEMONIC=<your mnemonic here>
 RINKEBY_ACCOUNT=<infura.io endpoint here>
-ADDRESS=<for now leave this blank>
+ADDRESS=<leave this blank for now>
 ```
 
-3.  From the root of directory cd into ethereum and run node compile.js to create the build folder
+3.  Run yarn (or npm) install to get all of the dependecies
+
+```
+yarn (or npm) install
+```
+
+4.  From the root of directory cd into ethereum and run node compile.js to create the build folder
 
 ```
 cd ethereum
 node compile.js
 ```
 
-4.  Once done then run node deploy.js to deploy the contract onto the network (this will generate a contractDeploymentInfo.txt file)
+5.  Once done, run node deploy.js to deploy the contract onto the network (this will generate a contractDeploymentInfo.txt file)
 
 ```
 node deploy.js
 ```
 
-5.  Look in the contractDeploymentInfo.txt flie and copy the contract address into the .env
+6.  Look in the contractDeploymentInfo.txt flie and copy the contract address into the .env
 
 ```
 ADDRESS=<address here>
 ```
 
-6.  Navigate back into the root of the project and run yarn install to get all of the dependecies
+7.  Navigate back to the root and run yarn start to get the dev server going and go to localhost:3000
 
 ```
 cd ..
-yarn (or npm) install
-```
-
-7.  Run yarn start to get the dev server going and go to localhost:3000
-
-```
 yarn start
 ```
 
