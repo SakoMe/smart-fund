@@ -30,7 +30,7 @@ export default class ContributeForm extends Component {
     return (
       <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
         <Form.Field>
-          <label>Contribution amount</label>
+          <label>Contribution Amount</label>
           <Input
             placeholder="How much ether would you like to contribute?"
             label="ether"

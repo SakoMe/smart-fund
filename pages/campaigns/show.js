@@ -33,34 +33,34 @@ export default class CampaignShow extends Component {
     const items = [
       {
         header: managerAddress,
-        meta: 'Blochain Address of Manager',
+        meta: "Manager's Address on the Blockchain",
         description:
-          'The Manager is the Campaign Creator and can make requests for funds to be withdrawn from this Campaign',
+          'The Manager is the creator of this campaign. However before spending any funds he/she must ask for the approval of proposed expeditures...',
         style: { overflowWrap: 'break-word' },
       },
       {
         header: minimumContribution,
         meta: 'Minimum Contribution (wei)',
         description:
-          'Minimum contirbution required by this campaign. Contributors will have the power to approve expenditure requests',
+          'Minimum contirbution required by this campaign in wei. All contributors will have the power to approve expenditure requests...',
       },
       {
         header: requestCount,
         meta: 'Number of Requests',
         description:
-          'A request tries to withdraw money from the contract. Requests must be approved by contributors',
+          'A request tries to withdraw money from the contract. All requests must be approved by at least 50% of all contributors...',
       },
       {
         header: approversCount,
         meta: 'Number of Contributors',
         description:
-          'Number of people who have already contributed to this campaign',
+          'Total number of people who have contributed to this campaign',
       },
       {
         header: web3.utils.fromWei(campaignBalance, 'ether'),
-        meta: 'Campaign Balance (ether)',
+        meta: 'Current Balance (ether)',
         description:
-          'The balance is how much money this campaign has left to spend.',
+          'The current balance is how much money this campaign has left to spend in ether.',
       },
     ];
 

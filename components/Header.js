@@ -5,7 +5,7 @@ import { Link } from '../routes';
 const Header = () => (
   <Menu inverted style={{ fontSize: '1.5rem', borderRadius: 0 }}>
     <Link route="/">
-      <a className="item">Ethereum Armenia Fund</a>
+      <a className="item">Smart Contract Crowdfunding</a>
     </Link>
     <Menu.Menu position="right">
       <Link route="/">
